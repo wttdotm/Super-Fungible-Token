@@ -155,8 +155,10 @@ ul.thumbnails.image_picker_selector li {
                 </form>
 
                 <script>
-                  var form = document.getElementById("sftform")
+                  const form = document.getElementById("sftform")
                   function handleForm(event) {
+                    event.preventDefault()
+
                     const sft = { sfturl: event.target.elements.sfturl.value }
                     const hostUrl = new URL(window.location)
                     const url = hostUrl.origin + "/sft"
@@ -165,7 +167,6 @@ ul.thumbnails.image_picker_selector li {
                       headers: {'Content-Type': 'application/json'},
                       body: JSON.stringify(sft)
                     })
-                    event.preventDefault()
                   }
                   form.addEventListener('submit', handleForm)
                 </script>
