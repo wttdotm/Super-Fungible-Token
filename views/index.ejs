@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
+                         type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Share Tech Mono' rel='stylesheet'>
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+  <style>
+body {
+  background-color: black;
+}
+
+footer {
+  margin-top: 25px;
+  text-align: center;
+  padding: 20px;
+  color:  #39ff14;
+}
+
+.nes-progress {
+  color:  #39ff14;
+}
+
+.content{
+  padding: 5px;
+  margin: 0 auto;
+}
+.content span{
+  width: 250px;
+}
+
+.dz-message{
+  text-align: center;
+  font-size: 28px;
+}
+
+.dropzone.dz-clickable {
+  cursor: pointer;
+  max-height: 20px;
+}
+
+.dropzone {
+  max-height: 20px;
+}
+
+h4{
+  font-family: 'Share Tech Mono';
+  font-size: 0.4vw;
+  color: #39ff14;
+  text-align: center;
+}
+
+.nes-container.is-dark {
+  border-color: #39ff14;
+}
+
+.flex-container {
+  /* We first create a flex layout context */
+  display: flex;
+
+  /* Then we define the flow direction
+     and if we allow the items to wrap
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+
+  /* Then we define how is distributed the remaining space */
+  justify-content: space-around;
+}
+
+ul.thumbnails.image_picker_selector li .thumbnail img {
+  max-width: 100%;
+}
+
+ul.thumbnails.image_picker_selector li {
+  max-width: 30%;
+}
+
+  </style>
+
+
+  <body>
+    <nav style="padding: 20px; margin-bottom: 20px;">
+      <div class="container">
+        <h4 style="margin-bottom: 0;">
+          <p style="color:white;">
+            <pre>  /$$$$$$  /$$   /$$ /$$$$$$$  /$$$$$$$$ /$$$$$$$              /$$$$$$$$ /$$   /$$ /$$   /$$  /$$$$$$  /$$$$$$ /$$$$$$$  /$$       /$$$$$$$$
+ /$$__  $$| $$  | $$| $$__  $$| $$_____/| $$__  $$            | $$_____/| $$  | $$| $$$ | $$ /$$__  $$|_  $$_/| $$__  $$| $$      | $$_____/
+| $$  \__/| $$  | $$| $$  \ $$| $$      | $$  \ $$            | $$      | $$  | $$| $$$$| $$| $$  \__/  | $$  | $$  \ $$| $$      | $$
+|  $$$$$$ | $$  | $$| $$$$$$$/| $$$$$   | $$$$$$$/            | $$$$$   | $$  | $$| $$ $$ $$| $$ /$$$$  | $$  | $$$$$$$ | $$      | $$$$$
+ \____  $$| $$  | $$| $$____/ | $$__/   | $$__  $$            | $$__/   | $$  | $$| $$  $$$$| $$|_  $$  | $$  | $$__  $$| $$      | $$__/
+ /$$  \ $$| $$  | $$| $$      | $$      | $$  \ $$            | $$      | $$  | $$| $$\  $$$| $$  \ $$  | $$  | $$  \ $$| $$      | $$
+|  $$$$$$/|  $$$$$$/| $$      | $$$$$$$$| $$  | $$            | $$      |  $$$$$$/| $$ \  $$|  $$$$$$/ /$$$$$$| $$$$$$$/| $$$$$$$$| $$$$$$$$
+ \______/  \______/ |__/      |________/|__/  |__/            |__/       \______/ |__/  \__/ \______/ |______/|_______/ |________/|________/
+            </pre>
+          </p>
+        </h4>
+        <div class="flex-container">
+          <img src="cryingape.gif" style="max-height: 12vh;">
+
+
+
+
+
+          <h4>
+            <p style="color:white;">
+              <pre> /$$$$$$$$  /$$$$$$  /$$   /$$ /$$$$$$$$ /$$   /$$
+|__  $$__/ /$$__  $$| $$  /$$/| $$_____/| $$$ | $$
+   | $$   | $$  \ $$| $$ /$$/ | $$      | $$$$| $$
+   | $$   | $$  | $$| $$$$$/  | $$$$$   | $$ $$ $$
+   | $$   | $$  | $$| $$  $$  | $$__/   | $$  $$$$
+   | $$   | $$  | $$| $$\  $$ | $$      | $$\  $$$
+   | $$   |  $$$$$$/| $$ \  $$| $$$$$$$$| $$ \  $$
+   |__/    \______/ |__/  \__/|________/|__/  \__/</pre>
+          </h4>
+          <img src="cryingpunk.gif" style="max-height: 12vh;">
+        </div>
+      </div>
+    </nav>
+    <!--
+      <nav style="padding: 20px; margin-bottom: 60px;">
+      <div class="container">
+      <h2 style="margin-bottom: 0;">
+      <i class="snes-jp-logo"></i>
+      <p style="color:white;">Super Fungible Token</p>
+      </h2>
+      </div>
+      </nav>
+    -->
+    <div class="container" style="margin:auto; width:80%;">
+      <div class="row">
+        <!-- left -->
+        <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: black;">
+          <div class="nes-container with-title is-dark" style="margin-bottom: 50px; background-color: black;">
+            <h3 class="title" style="background-color: black;">What is the SFT?</h3>
+            <div>
+              <ul class="nes-list is-circle" style="margin-bottom: 0;">
+                <p style="font-size: small;">
+                  The Super Fungible Token (SFT) is an art project intended to make an NFT whose contents anyone can edit. It is a real NFT, minted on the [insert low carbon blockchain + link contract], and it points to the file SFT.png on this website, which you can see to the right. Users can change the image held in the file SFT.png by picking from one of the options below. Submit one and you'll see what we mean :)
+                </p>
+              </ul>
+              <image src="<%= sfturl %>" style="width:500px;">
+              <div class="nes-container with-title is-dark" style="background-color: black;">
+                <h3 class="title" style="background-color: black">Funge the SFT</h3>
+
+                <form id="sftform">
+                  <label for="sfttextbox">SFT Url:</label>
+                  <input type="text" name="sfturl" id="sfttextbox">
+                  <button value="Funge">Funge</button>
+                </form>
+
+                <script>
+                  var form = document.getElementById("sftform")
+                  function handleForm(event) {
+                    const sft = { sfturl: event.target.elements.sfturl.value }
+                    const hostUrl = new URL(window.location)
+                    const url = hostUrl.origin + "/sft"
+                    fetch(url, {
+                      method: "POST",
+                      headers: {'Content-Type': 'application/json'},
+                      body: JSON.stringify(sft)
+                    })
+                    event.preventDefault()
+                  }
+                  form.addEventListener('submit', handleForm)
+                </script>
+              </div>
+
+                <button type="button">Click Me</button>
+                <p></p>
+                </form>
+                -->
+            </div>
+          </div>
+        </div>
+        <!-- right      -->
+        <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: black">
+          <div class="nes-container with-title is-dark" style="margin-bottom: 20px; background-color: black">
+            <h3 class="title" style="background-color: black">Current SFT</h3>
+            <!--  <img src="live/SFT.png" alt="Current SFT" style="max-width: 100%;"> -->
+            <img src="https://www.doesmyipaddresshave69init.com/dummy.png" alt="Current SFT" style="max-width: 100%;">
+
+            <br>
+            <br>
+            <p>Original File: placeholdername.png</p>
+            <p>Price: 0.00 ETH</p>
+            <p>Funge Count:
+              16
+            </p>
+          </div>
+        </div>
+
+
+        <div class="col-md-12 col-sm-18 col-xs-24" style="background-color: black">
+          <div class="nes-container with-title is-dark" style="background-color: black">
+            <h3 class="title" style="background-color: black">SFT Submissions</h3>
+            <div class="row">
+              <div class="col-sm-4 col-xs-12">10 SFT Images</div>
+              <div class="col-sm-8 col-xs-12">
+                <progress class="nes-progress" value=
+                          16 max="10">
+                </progress>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4 col-xs-12">50 SFT Images</div>
+              <div class="col-sm-8 col-xs-12">
+                <progress class="nes-progress is-warning" value=
+                          16              max="50">
+                </progress>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-4 col-xs-12">100 SFT Images</div>
+              <div class="col-sm-8 col-xs-12">
+                <progress class="nes-progress is-error" value=
+                          16
+                          max="100">
+                </progress>
+
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <footer>
+      <p>Digital Void x WTTDOTM</p>
+    </footer>
+  </body>
+</html>
