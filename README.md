@@ -1,4 +1,9 @@
-# SFT Proof of Concept
+# SFT Super Fungible Token
+
+By WTTDOTM and Alex Petros
+
+Original demo on github.com/alexpetros bc I am bad at forking
+
 ## Usage
 Make sure you have the latest version of node@17. Run `npm install` your first time downloading.
 
