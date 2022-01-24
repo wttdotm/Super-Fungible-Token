@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <meta charset="UTF-8">
-  <title>Page Title</title>
+  <title>Super Fungible Token - By Digital Void x WTTDOTM</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
                          type="text/css">
@@ -13,11 +13,20 @@ body {
   background-color: black;
 }
 
+input,textarea {
+     width:100%;
+     display:block }
+
 footer {
   margin-top: 25px;
   text-align: center;
   padding: 20px;
   color:  #39ff14;
+}
+
+img {
+object-fit: contain;
+max-width: 10em;
 }
 
 .nes-progress {
@@ -81,6 +90,28 @@ ul.thumbnails.image_picker_selector li {
   max-width: 30%;
 }
 
+p {
+  font-size: small;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 1000px) {
+p {
+    font-size: 0.6em;
+  }
+
+h3 {
+  font-size: 0.7em;
+}
+
+img {
+  max-width: 12vw;
+}
+
+}
+
+
+
   </style>
 
 
@@ -89,19 +120,19 @@ ul.thumbnails.image_picker_selector li {
       <div class="container">
         <h4 style="margin-bottom: 0;">
           <p style="color:white;">
-            <pre>  /$$$$$$  /$$   /$$ /$$$$$$$  /$$$$$$$$ /$$$$$$$              /$$$$$$$$ /$$   /$$ /$$   /$$  /$$$$$$  /$$$$$$ /$$$$$$$  /$$       /$$$$$$$$
- /$$__  $$| $$  | $$| $$__  $$| $$_____/| $$__  $$            | $$_____/| $$  | $$| $$$ | $$ /$$__  $$|_  $$_/| $$__  $$| $$      | $$_____/
-| $$  \__/| $$  | $$| $$  \ $$| $$      | $$  \ $$            | $$      | $$  | $$| $$$$| $$| $$  \__/  | $$  | $$  \ $$| $$      | $$
-|  $$$$$$ | $$  | $$| $$$$$$$/| $$$$$   | $$$$$$$/            | $$$$$   | $$  | $$| $$ $$ $$| $$ /$$$$  | $$  | $$$$$$$ | $$      | $$$$$
- \____  $$| $$  | $$| $$____/ | $$__/   | $$__  $$            | $$__/   | $$  | $$| $$  $$$$| $$|_  $$  | $$  | $$__  $$| $$      | $$__/
- /$$  \ $$| $$  | $$| $$      | $$      | $$  \ $$            | $$      | $$  | $$| $$\  $$$| $$  \ $$  | $$  | $$  \ $$| $$      | $$
-|  $$$$$$/|  $$$$$$/| $$      | $$$$$$$$| $$  | $$            | $$      |  $$$$$$/| $$ \  $$|  $$$$$$/ /$$$$$$| $$$$$$$/| $$$$$$$$| $$$$$$$$
- \______/  \______/ |__/      |________/|__/  |__/            |__/       \______/ |__/  \__/ \______/ |______/|_______/ |________/|________/
+            <pre>  /$$$$$$  /$$   /$$ /$$$$$$$  /$$$$$$$$ /$$$$$$$        /$$$$$$$$ /$$   /$$ /$$   /$$  /$$$$$$  /$$$$$$ /$$$$$$$  /$$       /$$$$$$$$
+ /$$__  $$| $$  | $$| $$__  $$| $$_____/| $$__  $$      | $$_____/| $$  | $$| $$$ | $$ /$$__  $$|_  $$_/| $$__  $$| $$      | $$_____/
+| $$  \__/| $$  | $$| $$  \ $$| $$      | $$  \ $$      | $$      | $$  | $$| $$$$| $$| $$  \__/  | $$  | $$  \ $$| $$      | $$      
+|  $$$$$$ | $$  | $$| $$$$$$$/| $$$$$   | $$$$$$$/      | $$$$$   | $$  | $$| $$ $$ $$| $$ /$$$$  | $$  | $$$$$$$ | $$      | $$$$$   
+ \____  $$| $$  | $$| $$____/ | $$__/   | $$__  $$      | $$__/   | $$  | $$| $$  $$$$| $$|_  $$  | $$  | $$__  $$| $$      | $$__/   
+ /$$  \ $$| $$  | $$| $$      | $$      | $$  \ $$      | $$      | $$  | $$| $$\  $$$| $$  \ $$  | $$  | $$  \ $$| $$      | $$      
+|  $$$$$$/|  $$$$$$/| $$      | $$$$$$$$| $$  | $$      | $$      |  $$$$$$/| $$ \  $$|  $$$$$$/ /$$$$$$| $$$$$$$/| $$$$$$$$| $$$$$$$$
+ \______/  \______/ |__/      |________/|__/  |__/      |__/       \______/ |__/  \__/ \______/ |______/|_______/ |________/|________/
             </pre>
           </p>
         </h4>
         <div class="flex-container">
-          <img src="cryingape.gif" style="max-height: 12vh;">
+          <img src="cryingape.gif">
 
 
 
@@ -118,7 +149,7 @@ ul.thumbnails.image_picker_selector li {
    | $$   |  $$$$$$/| $$ \  $$| $$$$$$$$| $$ \  $$
    |__/    \______/ |__/  \__/|________/|__/  \__/</pre>
           </h4>
-          <img src="cryingpunk.gif" style="max-height: 12vh;">
+          <img src="cryingpunk.gif">
         </div>
       </div>
     </nav>
@@ -139,13 +170,12 @@ ul.thumbnails.image_picker_selector li {
           <div class="nes-container with-title is-dark" style="margin-bottom: 50px; background-color: black;">
             <h3 class="title" style="background-color: black;">What is the SFT?</h3>
             <div>
-              <ul class="nes-list is-circle" style="margin-bottom: 0;">
-                <p style="font-size: small;">
-                  The Super Fungible Token (SFT) is an art project intended to make an NFT whose contents anyone can edit. It is a real NFT, minted on the [insert low carbon blockchain + link contract], and it points to the file SFT.png on this website, which you can see to the right. Users can change the image held in the file SFT.png by picking from one of the options below. Submit one and you'll see what we mean :)
+                <p>
+                  <!-- <p style="font-size: small;"> -->
+                  The Super Fungible Token (SFT) is an art project intended to make an NFT whose contents anyone can edit. It is a real NFT, minted on the [LINK BLOCKCHAIN], and it points to the file SFT.jpg on this website, which you can see to the right. Users can change the image associated with the file SFT.jpg by submitting a direct image link below :)
                 </p>
-              </ul>
-              <image src="<%= sfturl %>" style="width:500px;">
-              <div class="nes-container with-title is-dark" style="background-color: black;">
+
+             <div class="nes-container with-title is-dark" style="background-color: black;">
                 <h3 class="title" style="background-color: black">Funge the SFT</h3>
 
                 <form id="sftform">
@@ -153,58 +183,55 @@ ul.thumbnails.image_picker_selector li {
                   <input type="text" name="sfturl" id="sfttextbox">
                   <button value="Funge">Funge</button>
                 </form>
-
-                <script>
-                  const form = document.getElementById("sftform")
-                  function handleForm(event) {
-                    event.preventDefault()
-
-                    const sft = { sfturl: event.target.elements.sfturl.value }
-                    const hostUrl = new URL(window.location)
-                    const url = hostUrl.origin + "/sft"
-                    fetch(url, {
-                      method: "POST",
-                      headers: {'Content-Type': 'application/json'},
-                      body: JSON.stringify(sft)
-                    })
-                  }
-                  form.addEventListener('submit', handleForm)
-                </script>
               </div>
-
-                <button type="button">Click Me</button>
-                <p></p>
-                </form>
-                -->
             </div>
           </div>
         </div>
         <!-- right      -->
         <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: black">
           <div class="nes-container with-title is-dark" style="margin-bottom: 20px; background-color: black">
+            <div class="nes-container with-title is-dark" style="background-color: black;">
+              <h3 class="title" style="background-color: black">Current SFT</h3>
+<!--                   <image src="<%= sfturl %>" style="max-width: 100%;"></image> -->
+                  <image src="sft.jpg" style="max-width: 100%; max-height: 100%"></image>
+                   
+                  <script>
+                        const form = document.getElementById("sftform")
+                        function handleForm(event) {
+                          event.preventDefault()
+
+                          const sft = { sfturl: event.target.elements.sfturl.value }
+                          const hostUrl = new URL(window.location)
+                          const url = hostUrl.origin + "/sft"
+                          fetch(url, {
+                            method: "POST",
+                            headers: {'Content-Type': 'application/json'},
+                            body: JSON.stringify(sft)
+                          })
+                        }
+                        form.addEventListener('submit', handleForm)
+                      </script>
+                </div>
             <h3 class="title" style="background-color: black">Current SFT</h3>
             <!--  <img src="live/SFT.png" alt="Current SFT" style="max-width: 100%;"> -->
-            <img src="https://www.doesmyipaddresshave69init.com/dummy.png" alt="Current SFT" style="max-width: 100%;">
-
             <br>
-            <br>
-            <p>Original File: placeholdername.png</p>
-            <p>Price: 0.00 ETH</p>
-            <p>Funge Count:
-              16
-            </p>
+              <div style="max-width: 100%;">
+                <p>Original File: placeholdername.png</p>
+                <p>Price: 0.00 ETH</p>
+                <p>Funge Count: <%= fungecounter %></p>
+              </div>
           </div>
         </div>
 
 
-        <div class="col-md-12 col-sm-18 col-xs-24" style="background-color: black">
-          <div class="nes-container with-title is-dark" style="background-color: black">
+        <!-- <div class="col-md-12 col-sm-18 col-xs-24" style="background-color: black"> -->
+          <div class="nes-container with-title is-dark" style="background-color: black; width: 100%;">
             <h3 class="title" style="background-color: black">SFT Submissions</h3>
             <div class="row">
               <div class="col-sm-4 col-xs-12">10 SFT Images</div>
               <div class="col-sm-8 col-xs-12">
                 <progress class="nes-progress" value=
-                          16 max="10">
+                          <%= fungecounter %> max="10">
                 </progress>
               </div>
             </div>
@@ -213,7 +240,7 @@ ul.thumbnails.image_picker_selector li {
               <div class="col-sm-4 col-xs-12">50 SFT Images</div>
               <div class="col-sm-8 col-xs-12">
                 <progress class="nes-progress is-warning" value=
-                          16              max="50">
+                          <%= fungecounter %> max="50">
                 </progress>
               </div>
             </div>
@@ -222,20 +249,21 @@ ul.thumbnails.image_picker_selector li {
               <div class="col-sm-4 col-xs-12">100 SFT Images</div>
               <div class="col-sm-8 col-xs-12">
                 <progress class="nes-progress is-error" value=
-                          16
-                          max="100">
+                          <%= fungecounter %> max="100">
                 </progress>
 
 
               </div>
             </div>
           </div>
-        </div>
+<!--         </div> -->
 
       </div>
     </div>
     <footer>
       <p>Digital Void x WTTDOTM</p>
+      <br>
+      <p>Engineering: <a href="https://github.com/alexpetros">Alex Petros</a>, Theme Resources: <a href="https://github.com/nostalgic-css">nostalgic-css</a>
     </footer>
   </body>
 </html>
