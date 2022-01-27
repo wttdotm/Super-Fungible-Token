@@ -3,124 +3,158 @@
   <meta charset="UTF-8">
   <title>Super Fungible Token - By Digital Void x WTTDOTM</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css"
-                         type="text/css">
+    type="text/css">
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <link href='https://fonts.googleapis.com/css?family=Share Tech Mono' rel='stylesheet'>
   <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
   <style>
-body {
-  background-color: black;
-}
+    body {
+    background-color: black;
+    overflow-wrap: break-word;
+    }
 
-input,textarea {
-     width:100%;
-     display:block }
+    input,textarea {
+    width:100%;
+    display:block }
 
-footer {
-  margin-top: 25px;
-  text-align: center;
-  padding: 20px;
-  color:  #39ff14;
-}
+    a {
+      color:  #39ff14;
+    }
 
-img {
-object-fit: contain;
-max-width: 10em;
-}
+    footer {
+    margin-top: 25px;
+    text-align: center;
+    padding: 20px;
+    color:  #39ff14;
+    }
 
-.nes-progress {
-  color:  #39ff14;
-}
+    img {
+    object-fit: contain;
+    max-width: 10em;
+    }
 
-.content{
-  padding: 5px;
-  margin: 0 auto;
-}
-.content span{
-  width: 250px;
-}
+    .nes-progress {
+    color:  #39ff14;
+    }
 
-.dz-message{
-  text-align: center;
-  font-size: 28px;
-}
+    .content{
+    padding: 5px;
+    margin: 0 auto;
+    }
+    
+    .content span{
+    width: 250px;
+    }
+    
+    .dz-message{
+    text-align: center;
+    font-size: 28px;
+    }
 
-.dropzone.dz-clickable {
-  cursor: pointer;
-  max-height: 20px;
-}
+    .dropzone.dz-clickable {
+    cursor: pointer;
+    max-height: 20px;
+    }
+    
+    .dropzone {
+    max-height: 20px;
+    }
 
-.dropzone {
-  max-height: 20px;
-}
+    
+    h4{
+    font-family: 'Share Tech Mono';
+    font-size: 0.4vw;
+    color: #39ff14;
+    text-align: center;
+    }
+    
 
-h4{
-  font-family: 'Share Tech Mono';
-  font-size: 0.4vw;
-  color: #39ff14;
-  text-align: center;
-}
+    .nes-container.is-dark::after {
+      background-color: #000000;
 
-.nes-container.is-dark {
-  border-color: #39ff14;
-}
+    }
 
-.flex-container {
-  /* We first create a flex layout context */
-  display: flex;
-
-  /* Then we define the flow direction
-     and if we allow the items to wrap
-   * Remember this is the same as:
-   * flex-direction: row;
-   * flex-wrap: wrap;
-   */
-  flex-flow: row wrap;
-
-  /* Then we define how is distributed the remaining space */
-  justify-content: space-around;
-}
-
-ul.thumbnails.image_picker_selector li .thumbnail img {
-  max-width: 100%;
-}
-
-ul.thumbnails.image_picker_selector li {
-  max-width: 30%;
-}
-
-p {
-  font-size: small;
-}
-
-/* Extra small devices (phones, 600px and down) */
-@media (max-width: 1000px) {
-p {
+    .nes-container.is-dark {
+    border-color: #39ff14;
+    }
+    
+    .flex-container {
+    /* We first create a flex layout context */
+    display: flex;
+    /* Then we define the flow direction
+    and if we allow the items to wrap
+    * Remember this is the same as:
+    * flex-direction: row;
+    * flex-wrap: wrap;
+    */
+    flex-flow: row wrap;
+    /* Then we define how is distributed the remaining space */
+    justify-content: space-around;
+    }
+    
+    ul.thumbnails.image_picker_selector li .thumbnail img {
+    max-width: 100%;
+    }
+    
+    ul.thumbnails.image_picker_selector li {
+    max-width: 30%;
+    }
+    p {
+    font-size: small;
+    }
+    .row {
+    display: flex; /* equal height of the children */
+    background-color: none;
+    margin:  auto;
+    }
+    .col {
+    flex-basis: 25%;
+    flex-grow: 1;
+    }
+    /* Extra small devices (phones, 600px and down) */
+    @media (max-width: 1000px) {
+    p {
     font-size: 0.6em;
-  }
+    }
+    h3 {
+    font-size: 0.7em;
+    }
+    h4 {
+      font-size: 0.3vw;
+    }
+    img {
+    max-width: 12vw;
+    }
+    }
 
-h3 {
-  font-size: 0.7em;
+
+main {
+  display: flex;
 }
 
-img {
-  max-width: 12vw;
+section {
+  display: flex;
+  flex-direction: column;
 }
 
+:not(.limiter)>div.nes-container.is-dark.holdsft {
+  flex-basis: 0%;
+  flex-grow: 1;
 }
+
 
 
 
   </style>
-
-
   <body>
     <nav style="padding: 20px; margin-bottom: 20px;">
       <div class="container">
         <h4 style="margin-bottom: 0;">
           <p style="color:white;">
-            <pre>  /$$$$$$  /$$   /$$ /$$$$$$$  /$$$$$$$$ /$$$$$$$        /$$$$$$$$ /$$   /$$ /$$   /$$  /$$$$$$  /$$$$$$ /$$$$$$$  /$$       /$$$$$$$$
+          <pre>  /$$$$$$  /$$   /$$ /$$$$$$$  /$$$$$$$$ /$$$$$$$        /$$$$$$$$ /$$   /$$ /$$   /$$  /$$$$$$  /$$$$$$ /$$$$$$$  /$$       /$$$$$$$$
  /$$__  $$| $$  | $$| $$__  $$| $$_____/| $$__  $$      | $$_____/| $$  | $$| $$$ | $$ /$$__  $$|_  $$_/| $$__  $$| $$      | $$_____/
 | $$  \__/| $$  | $$| $$  \ $$| $$      | $$  \ $$      | $$      | $$  | $$| $$$$| $$| $$  \__/  | $$  | $$  \ $$| $$      | $$      
 |  $$$$$$ | $$  | $$| $$$$$$$/| $$$$$   | $$$$$$$/      | $$$$$   | $$  | $$| $$ $$ $$| $$ /$$$$  | $$  | $$$$$$$ | $$      | $$$$$   
@@ -133,14 +167,9 @@ img {
         </h4>
         <div class="flex-container">
           <img src="cryingape.gif">
-
-
-
-
-
           <h4>
             <p style="color:white;">
-              <pre> /$$$$$$$$  /$$$$$$  /$$   /$$ /$$$$$$$$ /$$   /$$
+            <pre> /$$$$$$$$  /$$$$$$  /$$   /$$ /$$$$$$$$ /$$   /$$
 |__  $$__/ /$$__  $$| $$  /$$/| $$_____/| $$$ | $$
    | $$   | $$  \ $$| $$ /$$/ | $$      | $$$$| $$
    | $$   | $$  | $$| $$$$$/  | $$$$$   | $$ $$ $$
@@ -153,6 +182,7 @@ img {
         </div>
       </div>
     </nav>
+
     <!--
       <nav style="padding: 20px; margin-bottom: 60px;">
       <div class="container">
@@ -162,108 +192,153 @@ img {
       </h2>
       </div>
       </nav>
-    -->
-    <div class="container" style="margin:auto; width:80%;">
+      -->
+
+
+
+
+      <!-- BEGIN COPY -->
+
+<div class="container" style="margin:auto; width:80%;">
       <div class="row">
         <!-- left -->
-        <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: black;">
-          <div class="nes-container with-title is-dark" style="margin-bottom: 50px; background-color: black;">
+        <div class="col" style="background-color: black;">
+          <!-- <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: black;"> -->
+          <div style="margin-bottom: 20px;">
+          <section class="limiter">
+          <div class="nes-container with-title is-dark" style="background-color: black;">
             <h3 class="title" style="background-color: black;">What is the SFT?</h3>
             <div>
-                <p>
-                  <!-- <p style="font-size: small;"> -->
-                  The Super Fungible Token (SFT) is an art project intended to make an NFT whose contents anyone can edit. It is a real NFT, minted on the [LINK BLOCKCHAIN], and it points to the file SFT.jpg on this website, which you can see to the right. Users can change the image associated with the file SFT.jpg by submitting a direct image link below :)
-                </p>
-
-             <div class="nes-container with-title is-dark" style="background-color: black;">
+              <p>
+                <!-- <p style="font-size: small;"> -->
+                The Super Fungible Token (SFT) is an art project intended to make an NFT whose contents anyone can edit. It is a real NFT, minted on the [LINK BLOCKCHAIN], and it points to the file SFT.jpg on this website, which you can see to the right. Anyone, including you, can change the image of the sft. Funge it below :) 
+              </p>
+              <div class="nes-container with-title is-dark" style="background-color: black;">
                 <h3 class="title" style="background-color: black">Funge the SFT</h3>
-
                 <form id="sftform">
-                  <label for="sfttextbox">SFT Url:</label>
-                  <input type="text" name="sfturl" id="sfttextbox">
-                  <button value="Funge">Funge</button>
+                  <label for="sfttextbox">Paste a direct image link:</label>
+                  <input type="text" name="sfturl" id="sfttextbox" value="example.com/sft.png">
+                  <button value="Funge" style="-webkit-appearance: none;">Funge</button>
                 </form>
               </div>
             </div>
           </div>
+        </section>
+      </div>
         </div>
         <!-- right      -->
-        <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: black">
-          <div class="nes-container with-title is-dark" style="margin-bottom: 20px; background-color: black">
-            <div class="nes-container with-title is-dark" style="background-color: black;">
-              <h3 class="title" style="background-color: black">Current SFT</h3>
-<!--                   <image src="<%= sfturl %>" style="max-width: 100%;"></image> -->
-                  <image src="sft.jpg" style="max-width: 100%; max-height: 100%"></image>
-                   
-                  <script>
-                        const form = document.getElementById("sftform")
-                        function handleForm(event) {
-                          event.preventDefault()
-
-                          const sft = { sfturl: event.target.elements.sfturl.value }
-                          const hostUrl = new URL(window.location)
-                          const url = hostUrl.origin + "/sft"
-                          fetch(url, {
-                            method: "POST",
-                            headers: {'Content-Type': 'application/json'},
-                            body: JSON.stringify(sft)
-                          })
-                        }
-                        form.addEventListener('submit', handleForm)
-                      </script>
-                </div>
+        <div class="col" style="background-color: black;">
+          <!--         <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: black">
+            -->          
+          <div class="nes-container with-title is-dark" style="background-color: black; max-height: 70vh; display: block; margin-left:  auto; margin-right: auto;justify-content: center; text-align: center;">
             <h3 class="title" style="background-color: black">Current SFT</h3>
-            <!--  <img src="live/SFT.png" alt="Current SFT" style="max-width: 100%;"> -->
+            <!--                   <image src="<%= sfturl %>" style="max-width: 100%;"></image> -->
+            <image src="sft.jpg" style="max-width: 100%; max-height: 85%;"></image>
             <br>
-              <div style="max-width: 100%;">
-                <p>Original File: placeholdername.png</p>
-                <p>Price: 0.00 ETH</p>
-                <p>Funge Count: <%= fungecounter %></p>
-              </div>
+            <br>
+            <div style="max-height: 20%; text-overflow: ellipsis;">
+            <a href="<%= sfturl %>">Link To Original Source</a>
+            </div>
+            <script>
+              const form = document.getElementById("sftform")
+              function handleForm(event) {
+                event.preventDefault()
+                console.log('handleevent triggered')
+              
+                const sft = { sfturl: event.target.elements.sfturl.value }
+                console.log(sft)
+                const sftcheck = event.target.elements.sfturl.value
+                console.log(typeof sftcheck)
+                // const sftcheckurl = new URL(sftcheck)
+                console.log(sftcheck)
+                // console.log(sftcheckurl)
+                const hostUrl = new URL(window.location)
+                const url = hostUrl.origin + "/sft"
+
+                fetch(new Request(sftcheck, { method: 'HEAD' }))
+                  .then((response) => {
+                    console.log(response.headers.get('content-type'));
+                    const contentType = response.headers.get('content-type');
+                    if (!response.ok) {
+                      throw new Error('link doesnt play nice');
+                    }
+                    else if (contentType.includes('image/')) {
+                    // if (response.ok) {
+                      console.log('response ok');
+                      fetch(url, {
+                        method: "POST",
+                        headers: {'Content-Type': 'application/json'},
+                        body: JSON.stringify(sft)
+                      })
+                      ;
+                      console.log('then hit')
+                      ;
+                      window.location.reload()
+                      ;
+                    } else {
+                      alert('This link is not an image. Please use a direct image link (eg. one ending in .png/jpg/gif).');
+                    }
+                  })
+                  .catch((error) =>{
+                    console.error(error);
+                    alert('This link is causing an error. Please use a direct image link (eg. one ending in .png/jpg/gif).')
+
+                })
+              }
+              form.addEventListener('submit', handleForm)
+                  </script>
           </div>
         </div>
-
-
-        <!-- <div class="col-md-12 col-sm-18 col-xs-24" style="background-color: black"> -->
-          <div class="nes-container with-title is-dark" style="background-color: black; width: 100%;">
-            <h3 class="title" style="background-color: black">SFT Submissions</h3>
-            <div class="row">
-              <div class="col-sm-4 col-xs-12">10 SFT Images</div>
-              <div class="col-sm-8 col-xs-12">
-                <progress class="nes-progress" value=
-                          <%= fungecounter %> max="10">
-                </progress>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-sm-4 col-xs-12">50 SFT Images</div>
-              <div class="col-sm-8 col-xs-12">
-                <progress class="nes-progress is-warning" value=
-                          <%= fungecounter %> max="50">
-                </progress>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-sm-4 col-xs-12">100 SFT Images</div>
-              <div class="col-sm-8 col-xs-12">
-                <progress class="nes-progress is-error" value=
-                          <%= fungecounter %> max="100">
-                </progress>
-
-
-              </div>
-            </div>
-          </div>
-<!--         </div> -->
-
       </div>
     </div>
+
+
+      <!--- END COPY -->
+    
+   <div class="container" style="margin:auto; width:80%;">
+    <div class="nes-container with-title is-dark" style="background-color: black;">
+      <h3 class="title" style="background-color: black">SFT Submissions</h3>
+      <p>Funge Count: <%= fungecounter %></p>
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">10 SFT Images</div>
+        <div class="col-sm-8 col-xs-12">
+          <progress class="nes-progress" value=
+            <%= fungecounter %> max="10">
+          </progress>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">50 SFT Images</div>
+        <div class="col-sm-8 col-xs-12">
+          <progress class="nes-progress is-warning" value=
+            <%= fungecounter %> max="50">
+          </progress>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">100 SFT Images</div>
+        <div class="col-sm-8 col-xs-12">
+          <progress class="nes-progress is-error" value=
+            <%= fungecounter %> max="100">
+          </progress>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!--         </div> -->
+    </div>
+    </div>
+
+
+
+
+
+
     <footer>
-      <p>Digital Void x WTTDOTM</p>
+      <p style="font-size: large;"><a href="https://www.digitalvoid.media/">Digital Void</a> x <a href="https://twitter.com/WTTDOTM">WTTDOTM</a></p>
       <br>
-      <p>Engineering: <a href="https://github.com/alexpetros">Alex Petros</a>, Theme Resources: <a href="https://github.com/nostalgic-css">nostalgic-css</a>
+      <p>Additional Contributors</p>
+      <p>Engineering: <a href="https://twitter.com/goodtweetsalex">Alex Petros</a>, Theme Resources: <a href="https://github.com/nostalgic-css">nostalgic-css</a>
     </footer>
   </body>
 </html>
