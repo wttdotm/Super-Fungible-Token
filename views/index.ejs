@@ -26,6 +26,17 @@
     overflow-wrap: break-word;
     }
 
+    button {
+      background-color: #black;
+      border: #39ff14;
+      padding: 5px 5px;
+      text-align: left;
+      text-decoration: none;
+      display: inline-block;
+      font-size: medium;
+    }
+
+
     input,textarea {
     width:100%;
     display:block }
@@ -103,6 +114,7 @@
     flex-flow: row wrap;
     /* Then we define how is distributed the remaining space */
     justify-content: space-around;
+    max-height: 20vh;
     }
     
     ul.thumbnails.image_picker_selector li .thumbnail img {
@@ -173,7 +185,7 @@ section {
   </style>
   <body>
     <nav style="padding: 20px; margin-bottom: 20px;">
-      <div class="containermobile"><img src="sftmobileheader.gif" style="display: block; width: 80%; max-width: 100%; margin-left: auto; margin-right: auto;"></div>
+      <div class="containermobile"><img src="sftmobileheader.gif" style="display: block; width: 100%; max-width: 100%; margin-left: auto; margin-right: auto;"></div>
       <div class="containermain">
         <h4 style="margin-bottom: 0;">
           <p style="color:white;">
@@ -236,14 +248,23 @@ section {
                 <!-- <p style="font-size: small;"> -->
                 The Super Fungible Token (SFT) is an art project intended to make an NFT whose contents anyone can edit. It is a
                 <a href="https://www.algogems.io/nft/570802733">real NFT</a>
-                real NFT minted on the carbon-neutral  <a href="https://algoexplorer.io/asset/570802733">Algorand blockchain</a>, and it points to the file SFT.jpg on this website, which you can see to the right. Anyone, including you, can change the image of the sft. Funge it below :) 
+                real NFT minted on the carbon-neutral  <a href="https://algoexplorer.io/asset/570802733">Algorand blockchain</a>, and it points to the file SFT.jpg on this website, which you can see to the right. Anyone, including you, can change the image of the SFT. Funge it below :) 
               </p>
               <div class="nes-container with-title is-dark" style="background-color: black;">
                 <h3 class="title" style="background-color: black">Funge the SFT</h3>
                 <form id="sftform">
-                  <label for="sfttextbox"><p>Paste a direct image link:</p></label>
-                  <input type="text" name="sfturl" id="sfttextbox" value="example.com/sft.png">
-                  <button value="Funge" style="-webkit-appearance: none;">Funge</button>
+                  <label for="sfttextbox"><p>Paste any direct image link:</p></label>
+                  <input type="text" name="sfturl" id="sfttextbox" value="example.com/image.jpg">
+                  <button value="Funge" style="background-color: black;
+                  text-decoration: none;
+                  border: 2px solid #39ff14;
+                  margin-top: 5px;
+                  margin-bottom: 5px;
+                  color: #39ff14;
+                  padding: 5px 5px;
+                  text-align: left;
+                  display: inline-block;
+                  font-size: medium;">>Funge</button>
                 </form>
               </div>
             </div>
@@ -354,7 +375,6 @@ section {
       </div>
     </div>
   </div>
-    <!--         </div> -->
     </div>
     </div>
 
