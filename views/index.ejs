@@ -11,6 +11,7 @@
 </script>
   <meta charset="UTF-8">
   <title>Super Fungible Token - By Digital Void x WTTDOTM</title>
+  <link rel="shortcut icon" type="image/jpg" href="favicon.png"/>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -123,6 +124,9 @@
     flex-basis: 25%;
     flex-grow: 1;
     }
+    .containermobile {
+      display: none;
+    }
     /* Extra small devices (phones, 600px and down) */
     @media (max-width: 1000px) {
     p {
@@ -136,6 +140,15 @@
     }
     img {
     max-width: 12vw;
+    }
+    .containermobile{
+      display: block;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .containermain{
+      display: none;
     }
     }
 
@@ -160,7 +173,8 @@ section {
   </style>
   <body>
     <nav style="padding: 20px; margin-bottom: 20px;">
-      <div class="container">
+      <div class="containermobile"><img src="sftmobileheader.gif" style="display: block; width: 80%; max-width: 100%; margin-left: auto; margin-right: auto;"></div>
+      <div class="containermain">
         <h4 style="margin-bottom: 0;">
           <p style="color:white;">
           <pre>  /$$$$$$  /$$   /$$ /$$$$$$$  /$$$$$$$$ /$$$$$$$        /$$$$$$$$ /$$   /$$ /$$   /$$  /$$$$$$  /$$$$$$ /$$$$$$$  /$$       /$$$$$$$$
@@ -220,12 +234,14 @@ section {
             <div>
               <p>
                 <!-- <p style="font-size: small;"> -->
-                The Super Fungible Token (SFT) is an art project intended to make an NFT whose contents anyone can edit. It is a real NFT, minted on the [LINK BLOCKCHAIN], and it points to the file SFT.jpg on this website, which you can see to the right. Anyone, including you, can change the image of the sft. Funge it below :) 
+                The Super Fungible Token (SFT) is an art project intended to make an NFT whose contents anyone can edit. It is a
+                <a href="https://www.algogems.io/nft/570802733">real NFT</a>
+                real NFT minted on the carbon-neutral  <a href="https://algoexplorer.io/asset/570802733">Algorand blockchain</a>, and it points to the file SFT.jpg on this website, which you can see to the right. Anyone, including you, can change the image of the sft. Funge it below :) 
               </p>
               <div class="nes-container with-title is-dark" style="background-color: black;">
                 <h3 class="title" style="background-color: black">Funge the SFT</h3>
                 <form id="sftform">
-                  <label for="sfttextbox">Paste a direct image link:</label>
+                  <label for="sfttextbox"><p>Paste a direct image link:</p></label>
                   <input type="text" name="sfturl" id="sfttextbox" value="example.com/sft.png">
                   <button value="Funge" style="-webkit-appearance: none;">Funge</button>
                 </form>
@@ -236,10 +252,10 @@ section {
       </div>
         </div>
         <!-- right      -->
-        <div class="col" style="background-color: black;">
+        <div class="col" style="background-color: black; margin-bottom: 20px;">
           <!--         <div class="col-md-6 col-sm-12 col-xs-12" style="background-color: black">
             -->          
-          <div class="nes-container with-title is-dark" style="background-color: black; max-height: 70vh; display: block; margin-left:  auto; margin-right: auto;justify-content: center; text-align: center;">
+          <div class="nes-container with-title is-dark" style="background-color: black; max-height: 70vh; display: block; justify-content: center; text-align: center;">
             <h3 class="title" style="background-color: black">Current SFT</h3>
             <!--                   <image src="<%= sfturl %>" style="max-width: 100%;"></image> -->
             <image src="sft.jpg" style="max-width: 100%; max-height: 40vh;"></image>
@@ -306,10 +322,14 @@ section {
     
    <div class="container" style="margin:auto; width:80%;">
     <div class="nes-container with-title is-dark" style="background-color: black;">
-      <h3 class="title" style="background-color: black">SFT Submissions</h3>
-      <p>Funge Count: <%= fungecounter %></p>
+      <h3 class="title" style="background-color: black">SFT Funge Count</h3>
       <div class="row">
-        <div class="col-sm-4 col-xs-12">10 SFT Images</div>
+        <div class="col-sm-4 col-xs-12">Total: <%= fungecounter %></div>
+        <br>
+      </div>
+      <div class="row"><br></div>
+      <div class="row">
+        <div class="col-sm-4 col-xs-12">10 SFT Funges</div>
         <div class="col-sm-8 col-xs-12">
           <progress class="nes-progress" value=
             <%= fungecounter %> max="10">
@@ -317,7 +337,7 @@ section {
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-4 col-xs-12">50 SFT Images</div>
+        <div class="col-sm-4 col-xs-12">50 SFT Funges</div>
         <div class="col-sm-8 col-xs-12">
           <progress class="nes-progress is-warning" value=
             <%= fungecounter %> max="50">
@@ -325,7 +345,7 @@ section {
         </div>
       </div>
       <div class="row">
-        <div class="col-sm-4 col-xs-12">100 SFT Images</div>
+        <div class="col-sm-4 col-xs-12">100 SFT Funges</div>
         <div class="col-sm-8 col-xs-12">
           <progress class="nes-progress is-error" value=
             <%= fungecounter %> max="100">
@@ -344,7 +364,7 @@ section {
 
 
     <footer>
-      <p style="font-size: large;"><a href="https://www.digitalvoid.media/">Digital Void</a> x <a href="https://twitter.com/WTTDOTM">WTTDOTM</a></p>
+      <p style="font-size: large;"><a href="https://twitter.com/WTTDOTM">WTTDOTM</a> x <a href="https://www.digitalvoid.media/">Digital Void</a></p>
       <br>
       <p>Additional Contributors</p>
       <p>Engineering: <a href="https://twitter.com/goodtweetsalex">Alex Petros</a>, Theme Resources: <a href="https://github.com/nostalgic-css">nostalgic-css</a>
