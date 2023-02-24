@@ -2,6 +2,8 @@
 
 By Morry Kolman and Alex Petros
 
+Previously hosted at superfungibletoken.com (now deprecated)
+
 ## Usage
 Make sure you have the latest version of node@17. Run `npm install` your first time downloading.
 
